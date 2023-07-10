@@ -70,3 +70,44 @@ function rotateArr(arr, shiftBy) {
 }
 
 console.log(rotateArr([1, 2, 3, 4, 5, 6], 2));
+
+//We set a temp variable to hold the value of the current index we are on.
+//We then set the current index to the value of the index at the end of the array.
+//We then set the value of the index at the end of the array to the value of the temp variable.
+//We then return the array.
+
+//#######################################################################
+
+//3.
+// Filter Range
+
+/* Alan is good at breaking secret codes.
+One method is to eliminate values that lie within a specific known range.
+Given arr and values min and max, retain only the array values between min and max.
+Work in-place: return the array you are given, with values in original order.
+No built-in array functions. */
+
+function filterRange(arr, min, max) {
+    var count = 0;
+    for (var i = 0; i < arr.length; i++) {
+        if (arr[i] < min || arr[i] > max) {
+            for (var j = i; j < arr.length - 1; j++) {
+                arr[j] = arr[j + 1];
+            }
+            arr.length = arr.length - 1;
+            i--
+        }
+
+    }
+    return arr;
+
+}
+
+console.log(filterRange([1, 2, 3, 4, 5, 6], 2, 4));
+
+//We set a temp variable to hold the value of the current index we are on.
+//We then set the current index to the value of the index at the end of the array.
+//We then set the value of the index at the end of the array to the value of the temp variable.
+//We then return the array.
+
+//#######################################################################
