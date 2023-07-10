@@ -111,3 +111,33 @@ console.log(filterRange([1, 2, 3, 4, 5, 6], 2, 4));
 //We then return the array.
 
 //#######################################################################
+
+//4.
+// Concat
+
+/* Replicate JavaScript’s concat().
+Create a standalone function that accepts two arrays.
+Return a new array containing the first array’s elements,
+followed by the second array’s elements.
+Do not alter the original arrays.
+Ex.: arrConcat( ['a','b'], [1,2] ) should return new array ['a','b',1,2]. */
+
+function concat(arr1, arr2) {
+    var newArr = [];
+    for (var i = 0; i < arr1.length; i++) {
+        newArr.push(arr1[i]);
+    }
+    for (var j = 0; j < arr2.length; j++) {
+        newArr.push(arr2[j]);
+    }
+    return newArr;
+}
+
+console.log(concat([1, 2, 3], [4, 5, 6]));
+
+//We set a temp variable to hold the value of the current index we are on.
+//We then set the current index to the value of the index at the end of the array.
+//We then set the value of the index at the end of the array to the value of the temp variable.
+//We then return the array.
+
+//#######################################################################
